@@ -48,12 +48,12 @@ update_percentage () {
 lines=$(tput lines)
 cols=$(tput cols)
 
-percentage=0
-sleep_time=0.5
 
+percentage=$1
+sleep_time=$2
 
-for i in $(seq 0 5 100); do
-    update_percentage $i
-done
+if [[ "$sleep_time" == "" ]]; then
+    sleep_time=0.001
+fi
 
-
+update_percentage $percentage
