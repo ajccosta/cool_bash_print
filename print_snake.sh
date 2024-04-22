@@ -87,6 +87,7 @@ print_snake () {
     fi
     #--------------Vertical down top
 
+    #Alternative to vertical down top
     #x=0
     #for j in $(seq $(min lin_size $((total_to_draw - drawn)) )); do
     #    return_term_init_pos
